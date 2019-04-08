@@ -10,10 +10,19 @@
 
 int main(void)
 {
-	DDRB = 0xFF;
-	PORTB = 0x00;
+	DDRA = 0x00; PORTA = 0xFF;
+	DDRB = 0xFF; PORTA = 0x00;
+	
+	unsigned char pa0 = 0x00;
+	unsigned char pa1 = 0x00;
 	while(1){
-		PORTB = 0x0F;
+		if((pa1 == 0x00) && (pa0 == 0x01)){
+			PORTB = 0x01;
+		}
+		else{
+			PORTB = 0x00;
+		}
 	}
+	return 0;
 }
 
