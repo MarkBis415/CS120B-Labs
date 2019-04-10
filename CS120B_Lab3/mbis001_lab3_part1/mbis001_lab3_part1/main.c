@@ -28,7 +28,7 @@ int main(void)
     /* Replace with your application code */
 	DDRA = 0x00; PORTA = 0xFF;
 	DDRB = 0x00; PORTB = 0xFF;
-	DDRC = 0x00; PORTC = 0x00;
+	DDRC = 0xFF; PORTC = 0x00;
 	
 	unsigned char counter = 0x00;
 	unsigned char result = 0x00;
